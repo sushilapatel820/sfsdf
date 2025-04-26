@@ -48,10 +48,10 @@ export function useNotes() {
           .filter(nt => nt.note_id === note.id)
           .map(nt => nt.tag_id);
         
-        const noteTags = tags
+        const noteTagsList = tags
           .filter(tag => noteTagIds.includes(tag.id));
 
-        return { ...note, tags: noteTags };
+        return { ...note, tags: noteTagsList };
       });
     },
     enabled: !!userId,
