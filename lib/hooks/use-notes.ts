@@ -44,7 +44,7 @@ export function useNotes() {
 
       // Combine notes with their tags
       return notes.map(note => {
-        const noteTagIds = noteTags
+        const noteTagIds: string[] = noteTags
           .filter(nt => nt.note_id === note.id)
           .map(nt => nt.tag_id);
         
